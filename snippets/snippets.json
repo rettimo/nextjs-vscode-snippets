@@ -1,0 +1,326 @@
+{
+  "importDestructingOfNext": {
+    "prefix": "imdn",
+    "body": "import { $2 } from 'next'$0"
+  },
+  "GetStaticProps": {
+    "prefix": "sp",
+    "body": [
+      "export const getStaticProps = async (context) => {",
+      "\treturn {",
+      "\t\tprops: {}",
+      "\t}",
+      "}",
+      ""
+    ]
+  },
+  "GetStaticPaths": {
+    "prefix": "spth",
+    "body": [
+      "export const getStaticPaths = async () => {",
+      "\treturn {",
+      "\t\tpaths: [",
+      "\t\t\t{ params: {} }",
+      "\t\t],",
+      "\t\tfallback: true",
+      "\t}",
+      "}",
+      ""
+    ]
+  },
+  "GetStaticPathsWithGetStaticProps": {
+    "prefix": "spthsp",
+    "body": [
+      "export const getStaticPaths = async () => {",
+      "\treturn {",
+      "\t\tpaths: [",
+      "\t\t\t{ params: {} }",
+      "\t\t],",
+      "\t\tfallback: true",
+      "\t}",
+      "}",
+      "",
+      "export const getStaticProps = async (context) => {",
+      "\treturn {",
+      "\t\tprops: {}",
+      "\t}",
+      "}",
+      ""
+    ]
+  },
+  "GetServerSideProps": {
+    "prefix": "ssp",
+    "body": [
+      "export const getServerSideProps = async (context) => {",
+      "\treturn {",
+      "\t\tprops: {}",
+      "\t}",
+      "}",
+      ""
+    ]
+  },
+  "GetInitialProps": {
+    "prefix": "initp",
+    "body": [
+      "export const getInitialProps = async (context) => {",
+      "\treturn {",
+      "\t\tprops: {}",
+      "\t}",
+      "}",
+      ""
+    ]
+  },
+  "reactFunctionalComponentWithGetStaticProps": {
+    "prefix": "rfsp",
+    "body": [
+      "function ${1:${TM_FILENAME_BASE}}() {",
+      "\treturn (",
+      "\t\t<div>",
+      "\t\t\t$0",
+      "\t\t</div>",
+      "\t)",
+      "}",
+      "",
+      "export async function getStaticProps(context) {",
+      "\treturn {",
+      "\t\tprops: {}",
+      "\t}",
+      "}",
+      "",
+      "export default ${1:${TM_FILENAME_BASE}}",
+      ""
+    ],
+    "description": "Creates a React Function Component with GetStaticProps"
+  },
+  "reactArrowFunctionalComponentWithGetStaticProps": {
+    "prefix": "rafsp",
+    "body": [
+      "const ${1:${TM_FILENAME_BASE}} = () => {",
+      "\treturn (",
+      "\t\t<div>",
+      "\t\t\t$0",
+      "\t\t</div>",
+      "\t)",
+      "}",
+      "",
+      "export const getStaticProps = async (context) => {",
+      "\treturn {",
+      "\t\tprops: {}",
+      "\t}",
+      "}",
+      "",
+      "export default ${1:${TM_FILENAME_BASE}}",
+      ""
+    ],
+    "description": "Creates a React Arrow Function Component with GetStaticProps"
+  },
+  "reactFunctionalComponentWithGetStaticPathsAndGetStaticProps": {
+    "prefix": "rfspthsp",
+    "body": [
+      "function ${1:${TM_FILENAME_BASE}}() {",
+      "\treturn (",
+      "\t\t<div>",
+      "\t\t\t$0",
+      "\t\t</div>",
+      "\t)",
+      "}",
+      "",
+      "export async function getStaticPaths() {",
+      "\treturn {",
+      "\t\tpaths: [",
+      "\t\t\t{ params: {} }",
+      "\t\t],",
+      "\t\tfallback: true",
+      "\t}",
+      "}",
+      "",
+      "export async function getStaticProps(context) {",
+      "\treturn {",
+      "\t\tprops: {},",
+      "\t}",
+      "}",
+      "",
+      "export default ${1:${TM_FILENAME_BASE}}",
+      ""
+    ],
+    "description": "Creates a React Function Component with GetStaticPaths and GetStaticProps"
+  },
+  "reactArrowFunctionalComponentWithGetStaticPathsAndGetStaticProps": {
+    "prefix": "rafspthsp",
+    "body": [
+      "const ${1:${TM_FILENAME_BASE}} = () => {",
+      "\treturn (",
+      "\t\t<div>",
+      "\t\t\t$0",
+      "\t\t</div>",
+      "\t)",
+      "}",
+      "",
+      "export const getStaticPaths = async () => {",
+      "\treturn {",
+      "\t\tpaths: [",
+      "\t\t\t{ params: {} }",
+      "\t\t],",
+      "\t\tfallback: true",
+      "\t}",
+      "}",
+      "",
+      "export const getStaticProps = async (context) => {",
+      "\treturn {",
+      "\t\tprops: {},",
+      "\t}",
+      "}",
+      "",
+      "export default ${1:${TM_FILENAME_BASE}}",
+      ""
+    ],
+    "description": "Creates a React Arrow Function Component with GetStaticPaths and GetStaticProps"
+  },
+  "reactFunctionalComponentWithGetServerSideProps": {
+    "prefix": "rfssp",
+    "body": [
+      "function ${1:${TM_FILENAME_BASE}}() {",
+      "\treturn (",
+      "\t\t<div>",
+      "\t\t\t$0",
+      "\t\t</div>",
+      "\t)",
+      "}",
+      "",
+      "export async function getServerSideProps(context) {",
+      "\treturn {",
+      "\t\tprops: {}",
+      "\t}",
+      "}",
+      "",
+      "export default ${1:${TM_FILENAME_BASE}}",
+      ""
+    ],
+    "description": "Creates a React Function Component with GetServerSideProps"
+  },
+  "reactArrowFunctionalComponentWithGetServerSideProps": {
+    "prefix": "rafssp",
+    "body": [
+      "const ${1:${TM_FILENAME_BASE}} = () => {",
+      "\treturn (",
+      "\t\t<div>",
+      "\t\t\t$0",
+      "\t\t</div>",
+      "\t)",
+      "}",
+      "",
+      "export const getServerSideProps = async (context) => {",
+      "\treturn {",
+      "\t\tprops: {}",
+      "\t}",
+      "}",
+      "",
+      "export default ${1:${TM_FILENAME_BASE}}",
+      ""
+    ],
+    "description": "Creates a React Arrow Function Component with GetServerSideProps"
+  },
+  "reactFunctionalComponentWithGetInitialProps": {
+    "prefix": "rfinitp",
+    "body": [
+      "function ${1:${TM_FILENAME_BASE}}() {",
+      "\treturn (",
+      "\t\t<div>",
+      "\t\t\t$0",
+      "\t\t</div>",
+      "\t)",
+      "}",
+      "",
+      "export async function getInitialProps(context) {",
+      "\treturn {",
+      "\t\tprops: {}",
+      "\t}",
+      "}",
+      "",
+      "export default ${1:${TM_FILENAME_BASE}}",
+      ""
+    ],
+    "description": "Creates a React Function Component with GetInitialProps"
+  },
+  "reactArrowFunctionalComponentWithGetInitialProps": {
+    "prefix": "rafinitp",
+    "body": [
+      "const ${1:${TM_FILENAME_BASE}} = () => {",
+      "\treturn (",
+      "\t\t<div>",
+      "\t\t\t$0",
+      "\t\t</div>",
+      "\t)",
+      "}",
+      "",
+      "export const getInitialProps = async (context) => {",
+      "\treturn {",
+      "\t\tprops: {}",
+      "\t}",
+      "}",
+      "",
+      "export default ${1:${TM_FILENAME_BASE}}",
+      ""
+    ],
+    "description": "Creates a React Arrow Function Component with GetInitialProps"
+  },
+  "CustomApp": {
+    "prefix": "capp",
+    "body": [
+      "function MyApp({ Component, pageProps }) {",
+      "\treturn <Component {...pageProps} />",
+      "}",
+      "",
+      "export default MyApp",
+      ""
+    ],
+    "description": "Creates a Custom App"
+  },
+  "CustomAppWithGetInitialProps": {
+    "prefix": "cappip",
+    "body": [
+      "function MyApp({ Component, pageProps }) {",
+      "\treturn <Component {...pageProps} />",
+      "}",
+      "",
+      "MyApp.getInitialProps = async (appContext) => {",
+      "\tconst appProps = await App.getInitialProps(appContext)",
+      "",
+      "\treturn { ...appProps }",
+      "}",
+      "",
+      "export default MyApp",
+      ""
+    ],
+    "description": "Creates a Custom App With GetInitialProps"
+  },
+  "CustomDocument": {
+    "prefix": "cdoc",
+    "body": [
+      "import Document, { Html, Head, Main, NextScript } from 'next/document'",
+      "",
+      "class MyDocument extends Document {",
+      "\tstatic async getInitialProps(ctx) {",
+      "\t\tconst initialProps = await Document.getInitialProps(ctx)",
+      "\t\treturn { ...initialProps }",
+      "\t}",
+      "",
+      "\trender() {",
+      "\t\treturn (",
+      "\t\t\t<Html>",
+      "\t\t\t\t<Head />",
+      "\t\t\t\t<body>",
+      "\t\t\t\t\t<Main />",
+      "\t\t\t\t\t<NextScript />",
+      "\t\t\t\t</body>",
+      "\t\t\t</Html>",
+      "\t\t)",
+      "\t}",
+      "}",
+      "",
+      "export default MyDocument",
+      ""
+    ],
+    "description": "Creates a Custom Document"
+  }
+}

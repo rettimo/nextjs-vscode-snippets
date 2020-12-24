@@ -1,0 +1,52 @@
+{
+  "name": "nextjs-snippets",
+  "displayName": "Next.js snippets",
+  "description": "Simple extensions for Next.js (JavaScript/TypeScript)",
+  "version": "1.0.0",
+  "keywords": [
+    "snippets",
+    "nextjs",
+    "react",
+    "javascript",
+    "typescript"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rettimo/nextjs-snippents"
+  },
+  "engines": {
+    "vscode": "^1.52.0"
+  },
+  "categories": [
+    "Snippets"
+  ],
+  "contributes": {
+    "snippets": [
+      {
+        "language": "javascript",
+        "path": "./snippets/snippets.json"
+      },
+      {
+        "language": "javascriptreact",
+        "path": "./snippets/snippets.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./snippets/snippets.json"
+      },
+      {
+        "language": "typescriptreact",
+        "path": "./snippets/snippets.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./snippets/ts-snippets.json"
+      },
+      {
+        "language": "typescriptreact",
+        "path": "./snippets/ts-snippets.json"
+      }
+    ]
+  }
+}
