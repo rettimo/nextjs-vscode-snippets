@@ -14,10 +14,35 @@
       ""
     ]
   },
+  "typeScriptGetStaticProps": {
+    "prefix": "tssp",
+    "body": [
+      "export const getStaticProps: GetStaticProps = async (context) => {",
+      "\treturn {",
+      "\t\tprops: {}",
+      "\t}",
+      "}",
+      ""
+    ]
+  },
   "GetStaticPaths": {
     "prefix": "spth",
     "body": [
       "export const getStaticPaths = async () => {",
+      "\treturn {",
+      "\t\tpaths: [",
+      "\t\t\t{ params: {} }",
+      "\t\t],",
+      "\t\tfallback: true",
+      "\t}",
+      "}",
+      ""
+    ]
+  },
+  "typeScriptGetStaticPaths": {
+    "prefix": "tsspth",
+    "body": [
+      "export const getStaticPaths: GetStaticPaths = async () => {",
       "\treturn {",
       "\t\tpaths: [",
       "\t\t\t{ params: {} }",
@@ -48,10 +73,41 @@
       ""
     ]
   },
+  "typeScriptGetStaticPathsWithGetStaticProps": {
+    "prefix": "tsspthsp",
+    "body": [
+      "export const getStaticPaths: GetStaticPaths = async () => {",
+      "\treturn {",
+      "\t\tpaths: [",
+      "\t\t\t{ params: {} }",
+      "\t\t],",
+      "\t\tfallback: true",
+      "\t}",
+      "}",
+      "",
+      "export const getStaticProps: GetStaticProps = async (context) => {",
+      "\treturn {",
+      "\t\tprops: {}",
+      "\t}",
+      "}",
+      ""
+    ]
+  },
   "GetServerSideProps": {
     "prefix": "ssp",
     "body": [
       "export const getServerSideProps = async (context) => {",
+      "\treturn {",
+      "\t\tprops: {}",
+      "\t}",
+      "}",
+      ""
+    ]
+  },
+  "typeScriptGetServerSideProps": {
+    "prefix": "tsssp",
+    "body": [
+      "export const getServerSideProps: GetServerSideProps = async (context) => {",
       "\treturn {",
       "\t\tprops: {}",
       "\t}",
@@ -92,6 +148,34 @@
     ],
     "description": "Creates a React Function Component with GetStaticProps"
   },
+  "typeScriptReactFunctionalComponentWithGetStaticProps": {
+    "prefix": "tsrfsp",
+    "body": [
+      "import { GetStaticProps } from 'next'",
+      "",
+      "interface Props {",
+      "",
+      "}",
+      "",
+      "function ${1:${TM_FILENAME_BASE}}(props: Props) {",
+      "\treturn (",
+      "\t\t<div>",
+      "\t\t\t$0",
+      "\t\t</div>",
+      "\t)",
+      "}",
+      "",
+      "export async function getStaticProps(context): GetStaticProps {",
+      "\treturn {",
+      "\t\tprops: {}",
+      "\t}",
+      "}",
+      "",
+      "export default ${1:${TM_FILENAME_BASE}}",
+      ""
+    ],
+    "description": "Creates a React Function Component with GetStaticProps and TypeScript interfaces"
+  },
   "reactArrowFunctionalComponentWithGetStaticProps": {
     "prefix": "rafsp",
     "body": [
@@ -113,6 +197,34 @@
       ""
     ],
     "description": "Creates a React Arrow Function Component with GetStaticProps"
+  },
+  "typeScriptReactArrowFunctionalComponentWithGetStaticProps": {
+    "prefix": "tsrafsp",
+    "body": [
+      "import { GetStaticProps } from 'next'",
+      "",
+      "interface Props {",
+      "",
+      "}",
+      "",
+      "const ${1:${TM_FILENAME_BASE}} = (props: Props) => {",
+      "\treturn (",
+      "\t\t<div>",
+      "\t\t\t$0",
+      "\t\t</div>",
+      "\t)",
+      "}",
+      "",
+      "export const getStaticProps: getStaticProps = async (context) => {",
+      "\treturn {",
+      "\t\tprops: {}",
+      "\t}",
+      "}",
+      "",
+      "export default ${1:${TM_FILENAME_BASE}}",
+      ""
+    ],
+    "description": "Creates a React Arrow Function Component with GetStaticProps and TypeScript interfaces"
   },
   "reactFunctionalComponentWithGetStaticPathsAndGetStaticProps": {
     "prefix": "rfspthsp",
@@ -145,6 +257,43 @@
     ],
     "description": "Creates a React Function Component with GetStaticPaths and GetStaticProps"
   },
+  "typeScriptReactFunctionalComponentWithGetStaticPathsAndGetStaticProps": {
+    "prefix": "tsrfspthsp",
+    "body": [
+      "import { GetStaticPaths, GetStaticProps } from 'next'",
+      "",
+      "interface Props {",
+      "",
+      "}",
+      "",
+      "function ${1:${TM_FILENAME_BASE}}(props: Props) {",
+      "\treturn (",
+      "\t\t<div>",
+      "\t\t\t$0",
+      "\t\t</div>",
+      "\t)",
+      "}",
+      "",
+      "export async function getStaticPaths(): GetStaticPaths {",
+      "\treturn {",
+      "\t\tpaths: [",
+      "\t\t\t{ params: {} }",
+      "\t\t],",
+      "\t\tfallback: true",
+      "\t}",
+      "}",
+      "",
+      "export async function getStaticProps(context): GetStaticProps {",
+      "\treturn {",
+      "\t\tprops: {},",
+      "\t}",
+      "}",
+      "",
+      "export default ${1:${TM_FILENAME_BASE}}",
+      ""
+    ],
+    "description": "Creates a React Function Component with GetStaticPaths, GetStaticProps and TypeScript interfaces"
+  },
   "reactArrowFunctionalComponentWithGetStaticPathsAndGetStaticProps": {
     "prefix": "rafspthsp",
     "body": [
@@ -176,6 +325,43 @@
     ],
     "description": "Creates a React Arrow Function Component with GetStaticPaths and GetStaticProps"
   },
+  "typeScriptReactArrowFunctionalComponentWithGetStaticPathsAndGetStaticProps": {
+    "prefix": "tsrafspthsp",
+    "body": [
+      "import { GetStaticPaths, GetStaticProps } from 'next'",
+      "",
+      "interface Props {",
+      "",
+      "}",
+      "",
+      "const ${1:${TM_FILENAME_BASE}} = (props: Props) => {",
+      "\treturn (",
+      "\t\t<div>",
+      "\t\t\t$0",
+      "\t\t</div>",
+      "\t)",
+      "}",
+      "",
+      "export const getStaticPaths: GetStaticPaths = async () => {",
+      "\treturn {",
+      "\t\tpaths: [",
+      "\t\t\t{ params: {} }",
+      "\t\t],",
+      "\t\tfallback: true",
+      "\t}",
+      "}",
+      "",
+      "export const getStaticProps: GetStaticProps = async (context) => {",
+      "\treturn {",
+      "\t\tprops: {},",
+      "\t}",
+      "}",
+      "",
+      "export default ${1:${TM_FILENAME_BASE}}",
+      ""
+    ],
+    "description": "Creates a React Arrow Function Component with GetStaticPaths, GetStaticProps and TypeScript interfaces"
+  },
   "reactFunctionalComponentWithGetServerSideProps": {
     "prefix": "rfssp",
     "body": [
@@ -198,6 +384,34 @@
     ],
     "description": "Creates a React Function Component with GetServerSideProps"
   },
+  "typeScriptReactFunctionalComponentWithGetServerSideProps": {
+    "prefix": "tsrfssp",
+    "body": [
+      "import { GetServerSideProps } from 'next'",
+      "",
+      "interface Props {",
+      "",
+      "}",
+      "",
+      "function ${1:${TM_FILENAME_BASE}}(props: Props) {",
+      "\treturn (",
+      "\t\t<div>",
+      "\t\t\t$0",
+      "\t\t</div>",
+      "\t)",
+      "}",
+      "",
+      "export async function getServerSideProps(context): GetServerSideProps {",
+      "\treturn {",
+      "\t\tprops: {}",
+      "\t}",
+      "}",
+      "",
+      "export default ${1:${TM_FILENAME_BASE}}",
+      ""
+    ],
+    "description": "Creates a React Function Component with GetServerSideProps and TypeScript interfaces"
+  },
   "reactArrowFunctionalComponentWithGetServerSideProps": {
     "prefix": "rafssp",
     "body": [
@@ -219,6 +433,34 @@
       ""
     ],
     "description": "Creates a React Arrow Function Component with GetServerSideProps"
+  },
+  "typeScriptReactArrowFunctionalComponentWithGetServerSideProps": {
+    "prefix": "tsrafssp",
+    "body": [
+      "import { GetServerSideProps } from 'next'",
+      "",
+      "interface Props {",
+      "",
+      "}",
+      "",
+      "const ${1:${TM_FILENAME_BASE}} = (props: Props) => {",
+      "\treturn (",
+      "\t\t<div>",
+      "\t\t\t$0",
+      "\t\t</div>",
+      "\t)",
+      "}",
+      "",
+      "export const getServerSideProps: GetServerSideProps = async (context) => {",
+      "\treturn {",
+      "\t\tprops: {}",
+      "\t}",
+      "}",
+      "",
+      "export default ${1:${TM_FILENAME_BASE}}",
+      ""
+    ],
+    "description": "Creates a React Arrow Function Component with GetServerSideProps and TypeScript interfaces"
   },
   "reactFunctionalComponentWithGetInitialProps": {
     "prefix": "rfinitp",
@@ -276,6 +518,20 @@
     ],
     "description": "Creates a Custom App"
   },
+  "typeScriptCustomApp": {
+    "prefix": "tscapp",
+    "body": [
+      "import type { AppProps } from 'next/app'",
+      "",
+      "function MyApp({ Component, pageProps }: AppProps) {",
+      "\treturn <Component {...pageProps} />",
+      "}",
+      "",
+      "export default MyApp",
+      ""
+    ],
+    "description": "Creates a Custom App with TypeScript"
+  },
   "CustomAppWithGetInitialProps": {
     "prefix": "cappip",
     "body": [
@@ -294,8 +550,62 @@
     ],
     "description": "Creates a Custom App With GetInitialProps"
   },
+  "typeScriptCustomAppWithGetInitialProps": {
+    "prefix": "cappip",
+    "body": [
+      "import type { AppProps, AppContext } from 'next/app'",
+      "",
+      "function MyApp({ Component, pageProps }: AppProps) {",
+      "\treturn <Component {...pageProps} />",
+      "}",
+      "",
+      "MyApp.getInitialProps = async (appContext: AppContext) => {",
+      "\tconst appProps = await App.getInitialProps(appContext)",
+      "",
+      "\treturn { ...appProps }",
+      "}",
+      "",
+      "export default MyApp",
+      ""
+    ],
+    "description": "Creates a Custom App With GetInitialProps and TypeScript"
+  },
   "CustomDocument": {
     "prefix": "cdoc",
+    "body": [
+      "import Document from 'next/document'",
+      "",
+      "class MyDocument extends Document {",
+      "\tstatic async getInitialProps(ctx) {",
+      "\t\tconst initialProps = await Document.getInitialProps(ctx)",
+      "",
+      "\t\treturn initialProps",
+      "\t}",
+      "",
+      "export default MyDocument",
+      ""
+    ],
+    "description": "Creates a Custom Document"
+  },
+  "typeScriptCustomDocument": {
+    "prefix": "tscdoc",
+    "body": [
+      "import Document, { DocumentContext } from 'next/document'",
+      "",
+      "class MyDocument extends Document {",
+      "\tstatic async getInitialProps(ctx: DocumentContext) {",
+      "\t\tconst initialProps = await Document.getInitialProps(ctx)",
+      "",
+      "\t\treturn initialProps",
+      "\t}",
+      "",
+      "export default MyDocument",
+      ""
+    ],
+    "description": "Creates a Custom Document with TypeScript"
+  },
+  "CustomDocumentWithDom": {
+    "prefix": "cdocdom",
     "body": [
       "import Document, { Html, Head, Main, NextScript } from 'next/document'",
       "",
@@ -321,6 +631,6 @@
       "export default MyDocument",
       ""
     ],
-    "description": "Creates a Custom Document"
+    "description": "Creates a Custom Document with DOM"
   }
 }
