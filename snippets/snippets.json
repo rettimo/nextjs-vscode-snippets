@@ -1,6 +1,6 @@
 {
   "importDestructingOfNext": {
-    "prefix": "imdn",
+    "prefix": "impn",
     "body": "import { $2 } from 'next'$0"
   },
   "getStaticProps": {
@@ -204,7 +204,7 @@
       "",
       "}",
       "",
-      "export ${1:${TM_FILENAME_BASE}}: NextPage<Props> = () => {",
+      "const ${1:${TM_FILENAME_BASE}}: NextPage<Props> = () => {",
       "\treturn (",
       "\t\t<div>",
       "\t\t\t$0",
