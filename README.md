@@ -60,6 +60,8 @@ FileName.getInitialProps = async (context) => {
 
 ### `np`
 
+Creates next page
+
 ```javascript
 const FileName = () => {
   return <div></div>
@@ -69,6 +71,8 @@ export default FileName
 ```
 
 ### `npsp`
+
+Creates next page with getStaticProps() method
 
 ```javascript
 const FileName = () => {
@@ -86,6 +90,8 @@ export default FileName
 
 ### `npssp`
 
+Creates next page with getServerSideProps() method
+
 ```javascript
 const FileName = () => {
   return <div></div>
@@ -102,6 +108,8 @@ export default FileName
 
 ### `npinitp`
 
+Creates next page with getInitialProps method
+
 ```javascript
 const FileName = () => {
   return <div></div>
@@ -116,6 +124,8 @@ export default FileName
 
 ### `capp`
 
+Creates custom app function in \_app file
+
 ```javascript
 const MyApp = ({ Component, pageProps }) => {
   return <Component {...pageProps} />
@@ -125,6 +135,8 @@ export default MyApp
 ```
 
 ### `cappip`
+
+Creates custom app function with getInitialProps in \_app file
 
 ```javascript
 const MyApp = ({ Component, pageProps }) => {
@@ -142,6 +154,8 @@ export default MyApp
 
 ### `cdoc`
 
+Creates custom doc class with getInitialProps in \_document file
+
 ```javascript
 import Document from 'next/document'
 
@@ -156,6 +170,8 @@ export default MyDocument
 ```
 
 ### `cdocdom`
+
+Creates custom doc class with getInitialProps and dom tree in \_document file
 
 ```javascript
 import Document, { Html, Head, Main, NextScript } from 'next/document'
