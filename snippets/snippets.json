@@ -212,7 +212,7 @@
       "\t)",
       "}",
       "",
-      "export const getServerSideProps: GetServerSideProps = (context) => {",
+      "export const getServerSideProps: GetServerSideProps = async (context) => {",
       "\treturn {",
       "\t\tprops: {}",
       "\t}",
