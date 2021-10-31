@@ -276,7 +276,7 @@ const FileName: NextPage<Props> = () => {
   return <div></div>
 }
 
-export const getServerSideProps: GetServerSideProps = (context) => {
+export const getServerSideProps: GetServerSideProps = async (context) => {
   return {
     props: {},
   }
